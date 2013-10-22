@@ -1,0 +1,70 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+	char admin[100],gön= ' ';
+	char sifre[100];
+	int sec,cek,yatir;
+	static int para=5000;
+	printf("Adiniz = ");
+	scanf("%s",&admin);
+	printf("Sifre = ");
+	scanf("%s",&sifre);
+	if(strcmp(admin, "mehmet")==0 && strcmp(sifre, "111")==0)
+	{
+		do {
+printf("Hesapdaki para icin 1 e bas");
+printf("\n");
+printf("Hesapdan para cekmek icin 2 ye bas");
+printf("\n");
+printf("Baska hesaba para gondermek icin 3 e bas");
+printf("\n");
+printf("Hesaba para yatirmak icin 4 e bas");
+printf("\n");
+printf("Cikis icin 5 e bas ");
+scanf("%d",&sec);
+printf("\n");
+switch(sec)
+{
+	case 1:
+		printf("Param = %d",para);
+		printf("\n");
+	break;
+	case 2:
+		printf("cekilecek miktar = ");
+		scanf("%d",&cek);
+		printf("\n");
+		para= para-cek;
+	break;
+	case 3:
+		printf("Gönderilecek kisi = ");
+		scanf("%s",&gön);
+		printf("\n");
+		printf("Gönderilcek miktar = ");
+		scanf("%d",&cek);
+		printf("\n");
+		para= para-cek;
+	break;
+	case 4:
+		printf("yatirilacak miktar = ");
+		scanf("%d",&yatir);
+		printf("\n");
+		para= para+yatir;
+	break;
+	case 5:
+		printf("Gule gule");
+		printf("\n");
+	break;
+	default:
+		printf("yanlis giris yaptiniz");
+		printf("\n");
+		break;
+}
+		}while(sec!=5);
+	}
+	else
+		printf("yanlis sifre yada yanlis kullanici adi");
+	printf("\n");
+	getch();
+	}
