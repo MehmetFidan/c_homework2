@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int a,birlik,onluk,yuzluk,binlik;
+	int yedek1,yedek2;
+printf("4 basamakli sayi giriniz = ");
+scanf("%d",&a);
+       yedek2=a % 1000;
+       yedek1=yedek2 % 100;
+       onluk=yedek1 / 10;
+       birlik=yedek1 % 10;
+       yuzluk=yedek2 / 100; 
+       binlik=a/1000; 
+      printf("%d tane binlik",binlik);
+	  printf("\n");
+      printf("%d tane yuzluk",yuzluk);
+	  printf("\n");
+	  printf("%d tane onluk",onluk);
+	  printf("\n");
+	  printf("%d tane birlik",birlik);
+	  getch();
+}
